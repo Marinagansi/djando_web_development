@@ -1,0 +1,178 @@
+html{
+    font-size: 62.5%;
+ 
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+    html::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    html::-webkit-scrollbar-track{
+       background: transparent;
+    }
+
+    html::-webkit-scrollbar-thumb{
+        background: #f4c7c7;
+     } 
+
+ section{
+     padding: 5rem 9%;
+ }
+
+ .wrapper{
+    position:relative;
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items : flex-end;
+    overflow: hidden;
+}
+
+.image-wrapper{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    z-index:-1;
+    animation: ani1 24s ease-out forwards;
+} 
+
+
+.wrapper-text{
+    text-align: center;
+    font-size:45px;
+    line-height: 55px;
+    letter-spacing: 5px;
+    font-family:poppins;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    padding: 3rem 2rem;
+    border-radius: 0.25rem;
+  
+    opacity: 0;
+    animation: ani2 0.5s ease-out forwards;
+
+}
+
+.wrapper-text h4,
+.wrapper-text h5{
+    opacity:0;
+    margin:0;
+
+}
+/* ease-in will start the animation slowly,
+ and finish at full speed. ease-out will start the animation at full speed,
+  then finish slowly.  */
+.wrapper-text h4{
+    animation: ani2 0.75s ease-in 4s forwards; 
+}
+.wrapper-text h5{
+    animation: ani2 0.75s ease-out 5s forwards;
+}
+
+@keyframes ani2{
+    100%{
+        opacity:1
+    }
+}
+@keyframes ani1{
+    50%{
+        transform: scale(1.55);
+    }
+}
+
+.heading{
+    margin-top: 3rem;
+    text-align:center;
+    margin-bottom:4rem;
+}
+.heading h1{
+    font-size: 3.5rem;
+    color:#525C91;
+
+}
+.heading p{
+    margin: 1rem auto;
+    font-size: 2rem;
+    color:#33353b;
+    /* max-width:70rem; */
+    line-height: 2;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+/* cloth section */
+.row {
+    margin: 4rem 2rem 2rem 4rem;
+}
+
+.row .btn{
+    width:8rem;
+    font-size: 1.2rem;
+    height: 3rem;
+    background-color: rgb(235, 204, 204);
+    color:black;
+    border:0.2rem solid black;
+}
+
+.row .pic{
+    height:30rem;
+    width:40rem;
+     
+    object-fit: cover;
+}
+.row .pics{
+    height:80%;
+    width:40rem;
+     
+   
+}
+.reviews{
+   
+    padding: 1rem 9%;
+}
+.reviews h1{
+    margin-top: 0%;
+}
+.reviews .slide .user img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .reviews .slide .user h3 {
+    font-size: 2rem;
+    color: #222;
+  }
+  
+  .reviews .slide .user .stars i {
+    font-size: 1.5rem;
+    color: #e84393;
+  }
+  
+  .reviews .slide .text {
+    padding: 2rem;
+    background: #b49797;
+    border-radius: .5rem;
+    line-height: 2;
+    font-size: 1.5rem;
+    color: rgb(12, 11, 11);
+    position: relative;
+    margin-top: 2rem;
+  }
+  
+  .reviews .row .text::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 3rem;
+    height: 2rem;
+    width: 2rem;
+    background: #b49797;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  

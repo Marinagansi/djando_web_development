@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static '/css/login1.css' %}">
+    
+</head>
+
+<body>
+
+    <section>
+        <img src="{% static 'assets/logincosmetic.png' %}">
+        <div class="form-container">
+            <h1>Admin Login form</h1>
+            <form action="login" method="POST">
+                {% csrf_token %}
+                <div class="control">
+                    <label for="name">Name</label>
+                    <div class="input-feild">
+                        <i class="fas fa-user-alt"></i>	</i><input type="text" name="customer_name" id="name" required>
+                    </div>
+
+                </div>
+                <div class="control">
+                    <label for="psw">password</label>
+                    <div class="input-feild">
+                        <i class="fas fa-lock"></i> <input type="password" name="customer_pasword" id="pasword" required>
+                    </div>
+
+                </div>
+                <span><input type="checkbox" name="" id="">Remember me</span>
+                {% if messages %}
+                <ul class="messages" style="color: white;">
+                    {% for message in messages %}
+                    {{ message }}
+                        {% endfor %}
+                </ul>
+                {% endif %}
+                <div class="control">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+          
+            
+            <div class="register">
+                <p>Don't have and account </p>
+                <a href="registration">create account</a>
+
+            </div>
+            <div class="link">
+                <a href="#">Forget password?</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

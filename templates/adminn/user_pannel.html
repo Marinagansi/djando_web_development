@@ -1,0 +1,44 @@
+{% extends 'adminn/admin.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/cloth_pannel.css' %}">
+<h1>User Section<h1>
+<div class="col-lg-10">
+      <div class="row">
+        <div class="col-lg-12">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">type</th>
+                    <th scope="col">details</th>
+                    <th scope="col">price</th>
+                    <th scope="col">Action</th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for auth_user in users %}
+                  <tr>
+                    <th scope="row">{{auth_user.username}}</th>
+                    
+                    
+                    <td>
+                        <a href="user_edit/{{auth_user.id}}" class="btn btn-secondary edit">edit <i class="fas fa-edit"></i></a>
+                        <a href="cloth_delete/{{store.cloths_id}}" class="btn btn-danger delete">delete <i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <script>
+      function Redirect() {
+        window.location = "storeform"
+      }
+    </script>
+    {% endblock content %}

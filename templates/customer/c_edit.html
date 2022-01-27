@@ -1,0 +1,41 @@
+{% extends 'adminn/admin.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{% static '/css/cloth_form.css' %}">
+<body>
+    <div class="container">
+        <div class="content-box">
+                <div class="left"></div>
+                        <div class="right">
+                                <h2>Update customer</h2>
+                                <form action="/customer_update/{{customers.customer_id}}" class="form" method="POST" >
+                                        {% csrf_token %}
+                                        <label> Name </label>
+                                        <input class="field" type="text" name="customer_name" value={{customers.customer_name}}>
+                                        <label> Email</label>
+                                        <input class="field" type="text" name="customer_email" value={{customers.customer_email}}>
+                                        <label> Address</label>
+                                        <input class="field" type="text" name="customer_address" value={{customers.customer_address}}>
+                                        
+
+                                        <input type="submit" class="btn" value="Update" />
+
+                                </form>
+                        </div>
+
+                
+        </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
+    {% endblock content %}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="{% static '/css/nav.css' %}">
+  <link rel="stylesheet" href="{% static '/css/first.css' %}">
+  <title>nav</title>
+
+</head>
+
+<body>
+  <!-- navbar -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg  bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Stlye Look</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Genre
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">western</a></li>
+                <li><a class="dropdown-item" href="#">culture</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">ocassion</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hire</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Rules</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <!-- <a data-aos="zoom-in-left" data-aos-delay="1300" href="user_profile" class="btn">{{request.user.username}} </a> -->
+            <a data-aos="zoom-in-left" data-aos-delay="1300" href="login" class="btn">Admin</a>
+            <a data-aos="zoom-in-left" data-aos-delay="1300" href="/customer/signin" class="btn">login</a>
+            <!-- <button class="btn">Logout</button> -->
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <div class="wrapper">
+    <img src="{% static 'assets/intro1.png' %}" alt="" class="image-wrapper">
+    <div class="wrapper-text">
+      <h4>Make you occassion special</h4>
+      <h5>style look</h5>
+    </div>
+
+
+  </div>
+  <!-- wraper text end-->
+  <!-- second heading -->
+  <div class="heading">
+    <h1>Dress Hire</h1>
+    <p>In our daily life, we buy different kinds of products so as to satisfy our varied needs. In this way, we
+      can say that the product is one which has the capacity to satisfy our wants/needs. that is why the
+      product is at the time defined as a bundle of potential utility. A product may be regarded from the
+      marketing viewpoint as a bundle of benefits which are being offered to the consumer</p>
+
+  </div>
+  <!-- second heading end-->
+
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 text-center p-3">
+      <img class="img-fluid pics" src="{% static 'assets/dress1.jpg' %}">
+      <h3>Influence by western culture</h3>
+      <button class="btn" onclick="Redirect()">see more</button>
+    </div>
+    <div class="col-lg-4  col-md-6 col-sm-12  text-center p-3">
+      <img class="img-fluid  pics " src="{% static 'assets/dress3.jpg' %}">
+      <h3>The golden sherwani</h3>
+      <button class="btn" onclick="Redirect()">See more</button>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12  text-center p-3">
+      <img class="img-fluid pics" src="{% static 'assets/dress2.jpg' %}">
+      <h3>Blue lehenga</h3>
+      <button class="btn" onclick="Redirect()">See more</button>
+    </div>
+
+  </div>
+
+  <!-- team section start -->
+  <div class="heading">
+    <hr>
+    <h1>Our Team</h1>
+    <p>We are surrounded with highly qualified team</p>
+
+  </div>
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-12 text-center p-3">
+      <img class="img-fluid   pic" src="{% static 'assets/manis rai.jpeg' %}">
+      <h3>Manish Rai</h3>
+
+    </div>
+    <div class="col-lg-3  col-md-6 col-sm-12  text-center p-3">
+      <img class="img-fluid  pic " src="{% static 'assets/yubi thapa.jpeg' %}">
+      <h3>Yubi Thapa</h3>
+
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-12  text-center p-3">
+      <img class="img-fluid pic" src="{% static 'assets/anu sth.jpeg' %}">
+      <h3>Anu Shrestha</h3>
+
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12  text-center p-3">
+      <img class="img-fluid pic" src="{% static 'assets/swangi pradhan.jpeg' %}">
+      <h3>Shiwangi Pradhan.</h3>
+
+    </div>
+
+  </div>
+  <hr>
+  <!-- team section end -->
+
+
+  <!-- review section start -->
+  <section class="reviews">
+    <div class="heading">
+      <h1>Customer Reviews</h1>
+
+    </div>
+    <div class="row">
+
+      <div class=" col-lg-4 col-md-6 col-sm-12 slide">
+        <div class="user">
+          <img src="{% static 'assets/anu sth.jpeg' %}" alt="">
+          <div class="info">
+            <h3>john deo</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text">Very good quality product. Convinence to use and apply with proper direction. well
+          given details and summary about the product and can have with low cost</p>
+      </div>
+
+      <div class=" col-lg-4 col-md-6 col-sm-12 slide">
+        <div class="user">
+          <img src="{% static 'assets/yubi thapa.jpeg' %}" alt="">
+          <div class="info">
+            <h3>john deo</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text">I use this product daily and compared to most other foundations i have used, this is
+          absoslutly favourites i has such a smooth finish</p>
+      </div>
+      <div class=" col-lg-4 col-md-6 col-sm-12 slide">
+        <div class="user">
+          <img src="{% static 'assets/yubi thapa.jpeg' %}" alt="">
+          <div class="info">
+            <h3>john deo</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text">I use this product daily and compared to most other foundations i have used, this is
+          absoslutly favourites i has such a smooth finish</p>
+      </div>
+    </div>
+  </section>
+  <section class="footer">
+    <div class="credit"> created by <span>Marina Gansi</span> | all rights reserved! </div>
+  </section>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+</body>
+
+<script>
+  function Redirect() {
+    window.location = "signin"
+  }
+</script>
+
+</html>

@@ -1,0 +1,61 @@
+{% extends 'adminn/admin.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/cloths_pannel.css' %}">
+<h1>Booking Section</h1>
+
+    <button onclick="Redirect()" class="btn1">add <i class="fa fa-plus" aria-hidden="true"></i></button>
+    <div class="row">
+      
+            <table class="table" style="margin-left: 0%;">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    
+                    <th scope="col">Cloth</th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Email Address</th>
+                    <th scope="col">Start date</th>
+                    <th scope="col">Total days</th>
+                    <th scope="col">Action</th>
+                   
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for booking in books %}
+                  <tr>
+                    <th >{{booking.booking_id}}</th>
+                    <td>{{booking.cloth.cloths_id}}<br>
+                      {{booking.cloth.cloths_name}}<br>
+                      {{booking.cloth.cloths_type}}<br>
+                      {{booking.cloth.cloths_price}}<br>
+                    </td>
+                   
+                    <td>{{booking.consumer.customer_id}}<br>
+                      {{booking.consumer.customer_name}}<br>
+                      {{booking.consumer.customer_email}}<br>
+                      {{booking.consumer.customer_address}}<br>
+                    </td>
+                    <td>{{booking.email}}</td>
+                    <td>{{booking.start_date}}</td>
+                    <td>{{booking.days}}</td>
+                    
+                    <td>
+                        <a href="/booking/booking_edit/{{booking.booking_id}}" class="btn btn-secondary edit">edit <i class="fas fa-edit"></i></a>
+                        <a href="booking/booking_delete/{{booking.booking_id}}" class="btn btn-danger delete">delete <i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                  
+                </tbody>
+              </table>
+        </div>
+ 
+  </div>
+<!-- <h1>bookinf pannel</h1>
+{% for booking in books %}
+<h2>{{booking.email}}</h2>
+{% endfor %} -->
+
+{% endblock content %}

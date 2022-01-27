@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap');
+
+html,body{
+    font-family:'Times New Roman', Times, serif;
+    font-size:12px;
+    line-height:1.5;
+    box-sizing:border-box;
+    margin:0;
+    /* overflow-x:hidden; */
+    top:0;
+    left:0
+
+}
+html{
+    font-size: 62.5%;
+ 
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+    html::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    html::-webkit-scrollbar-track{
+       background: transparent;
+    }
+
+    html::-webkit-scrollbar-thumb{
+        background: #f4c7c7;
+     } 
+
+.heading{
+    background-color: rgb(138, 128, 128);
+    height:5rem;
+    font-size: medium;
+    font-family: 'pacifico',cursive;
+    margin-bottom: 3rem;
+
+}
+.vertical-nav {
+    background-color: rgb(241, 244, 247);
+}
+.nav-link{
+    text-align:  center;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(194, 33, 33);
+    font-size: 2rem;
+    line-height: 1.5;
+    opacity:.7
+}
+.nav-link:hover{
+    opacity:1;
+    background-color: white;
+}

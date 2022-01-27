@@ -1,0 +1,154 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+
+<!-- custome link -->
+<link rel="stylesheet" href="{% static '/css/home.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- wraper text -->
+<div class="wrapper">
+  <img src="{% static 'assets/intro1.png' %}" alt="" class="image-wrapper">
+  <div class="wrapper-text">
+    <h4>Make you occassion special</h4>
+    <h5>style look</h5>
+  </div>
+</div>
+<!-- wraper text end-->
+
+<div class="heading">
+  <h1>Dress Hire</h1>
+  <p>A convenient and cost-effective way of choosing clothes, renting is the way to go. This is more likely the most
+    important reason why people choose to rent. Almost everybody has bought a dress and ended up only using it once or
+    twice. If people hire the clothes they can wear for at the onetime and return no need to store them in their closet
+    for the remaining year.</p>
+
+</div>
+
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-12 text-center p-3">
+    <img class="img-fluid   pics" src="{% static 'assets/dress1.jpg' %}">
+    <h3>Influence by western culture</h3>
+    <button class="btn" onclick="Redirect()">See more</button>
+  </div>
+
+  <div class="col-lg-4  col-md-6 col-sm-12  text-center p-3">
+    <img class="img-fluid  pics " src="{% static 'assets/dress3.jpg' %}">
+    <h3>The golden sherwani</h3>
+    <button class="btn" onclick="Redirect()">See more</button>
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-12  text-center p-3">
+    <img class="img-fluid  pics" src="{% static 'assets/dress2.jpg' %}">
+    <h3>Blue lehenga</h3>
+    <button class="btn" onclick="Redirect()">See more</button>
+  </div>
+
+</div>
+
+<!-- team section start -->
+<div class="heading">
+  <hr>
+  <h1>Our Team</h1>
+  <p>We are surrounded with highly qualified team</p>
+
+</div>
+<div class="row">
+  <div class="col-lg-3 col-md-6 col-sm-12 text-center p-3">
+    <img class="img-fluid   pic" src="{% static 'assets/manis rai.jpeg' %}">
+    <h3>Manish Rai</h3>
+    <h2>Designer</h2>
+
+  </div>
+  <div class="col-lg-3  col-md-6 col-sm-12  text-center p-3">
+    <img class="img-fluid  pic " src="{% static 'assets/yubi thapa.jpeg' %}">
+    <h3>Yubi Thapa</h3>
+    <h2>Designer</h2>
+
+  </div>
+  <div class="col-lg-3 col-md-6 col-sm-12  text-center p-3">
+    <img class="img-fluid pic" src="{% static 'assets/anu sth.jpeg' %}">
+    <h3>Anu Shrestha</h3>
+    <h2>Designer</h2>
+
+  </div>
+
+  <div class="col-lg-3 col-md-6 col-sm-12  text-center p-3">
+    <img class="img-fluid pic" src="{% static 'assets/swangi pradhan.jpeg' %}">
+    <h3>Shiwangi Pradhan.</h3>
+    <h2>Designer</h2>
+
+  </div>
+
+</div>
+<hr>
+<!-- team section end -->
+
+
+<!-- review section start -->
+<section class="reviews">
+  <div class="heading">
+    <h1>Customer Reviews</h1>
+
+  </div>
+  <div class="row">
+
+    <div class=" col-lg-4 col-md-6 col-sm-12 slide">
+      <div class="user">
+        <img src="{% static 'assets/anu sth.jpeg' %}" alt="">
+        <div class="info">
+          <h3>john deo</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+      <p class="text">Very good quality product. Convinence to use and apply with proper direction. well
+        given details and summary about the product and can have with low cost</p>
+    </div>
+
+    <div class=" col-lg-4 col-md-6 col-sm-12 slide">
+      <div class="user">
+        <img src="{% static 'assets/yubi thapa.jpeg' %}" alt="">
+        <div class="info">
+          <h3>john deo</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+      <p class="text">I use this product daily and compared to most other foundations i have used, this is
+        absoslutly favourites i has such a smooth finish</p>
+    </div>
+    <div class=" col-lg-4 col-md-6 col-sm-12 slide">
+      <div class="user">
+        <img src="{% static 'assets/yubi thapa.jpeg' %}" alt="">
+        <div class="info">
+          <h3>john deo</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+      <p class="text">I use this product daily and compared to most other foundations i have used, this is
+        absoslutly favourites i has such a smooth finish</p>
+    </div>
+  </div>
+</section>
+<script>
+  function Redirect() {
+    window.location = "/store/shop"
+  }
+</script>
+{% endblock content %}

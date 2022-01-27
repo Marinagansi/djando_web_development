@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static '/css/login1.css' %}">
+    
+</head>
+
+<body>
+
+    <section>
+        <img src="{% static 'assets/logincosmetic.png' %}">
+        <div class="form-container">
+            <h1>Customer Login form</h1>
+            <form action="signin" name='form' method="POST" onsubmit="return validated()" >
+                {% csrf_token %}
+                <div class="control">
+                    <label for="name">Name</label>
+                    <div class="input-feild" name="custome_name">
+                        <i class="fas fa-user-alt"></i>	</i><input type="text" name="customer_name" id="name" >
+                    </div>             
+                </div>
+                <div id="name_message" style="color: brown; font-size: medium; display: none;">**Empty</div>
+                <div class="control">
+                    <label for="psw">password</label>
+                    <div class="input-feild">
+                        <i class="fas fa-lock"></i> <input type="password" name="customer_password" id="pasword" >
+                    </div>                 
+                </div>
+                <div id="password_message" style="color: brown; font-size: medium; display: none;">**required</div>
+                <span><input type="checkbox" name="" id="">Remember me</span>
+              <div name="error_message"></div>
+              {% if messages %}
+              <ul>
+                 {% for message in messages %}
+                     <li style="color:red">{{ message }}</li>
+                 {% endfor %}
+              </ul>
+              {% endif %}
+                   
+               
+                
+                <div class="control">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+          
+            
+            <div class="register">
+                <p>Don't have and account </p>
+                <a href="customerform">create account</a>
+
+            </div>
+            <div class="link">
+                <a href="#">Forget password?</a>
+            </div>
+        </div>
+    </section>
+    <script src="{% static '/js/login.js' %}" ></script>
+</body>
+
+</html>

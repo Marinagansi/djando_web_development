@@ -1,0 +1,55 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/contact.css' %}">
+<!--JQUERY-->
+<script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+<div class="container">
+    <div class="content-box">
+            <div class="left">
+                <div class="row">
+                    <div class="col-lg-10 col-md-6 col-sm-12 text-center contents ">
+                        <h1>Direct Call</h1>
+                        <h6>00-123-9851045065</h6>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-10 col-md-6 col-sm-12 text-center contents ">
+                            <h1>Email</h1>
+                            <h6>look@gmail.com</h6>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-10 col-md-6 col-sm-12 text-center contents ">
+                                <h1>Message </h1>
+                                <h6>9851045065</h6>
+                            </div>
+                            </div>
+            </div>
+                    <div class="right">
+                            <h2>Contact Us</h2>
+                            <form action="" name="form" method="POST"  onsubmit="return validated()" >
+                                    {% csrf_token %}
+                                    <label>Name</label>
+                                    <input class="field" type="text" name="contact_name">
+                                    <div id="name_message" style="color: brown; font-size: medium; display: none;">**required</div>
+                                    <label>Email</label>
+                                    <input class="field" type="text" name="contact_email">
+                                    <div id="email_message" style="color: brown; font-size: medium; display: none;">**required</div>
+                                    <label>phone</label>
+                                    <input class="field" type="text" name="contact_phone">
+                                    <div id="phone_message" style="color: brown; font-size: medium; display: none;">**required</div>
+                                    <label>Message</label>
+                                    <input class="field area" type="text" name="contact_message" >
+                                    <div id="msg_message" style="color: brown; font-size: medium; display: none;">**required</div>
+                                    <input type="submit" class="btn" value="Send" />
+
+                            </form>
+                    </div>
+
+            
+    </div>
+</div>
+
+<script src="{% static '/js/contact.js' %}" ></script>
+{% endblock content %}

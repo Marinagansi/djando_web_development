@@ -1,0 +1,49 @@
+{% extends 'adminn/admin.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static '/css/cloth_form.css' %}">
+
+<div class="container">
+        <div class="content-box">
+                <div class="left"></div>
+                        <div class="right">
+                                <h2>add cloth</h2>
+                                <form action="" class="form" method="POST" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <label> Enter cloths name </label>
+                                        <input class="field" type="text" name="cloths_name">
+                                        <label> Type</label>
+                                        <input class="field" type="text" name="cloths_type">
+                                        <label> Details </label>
+                                        <input class="field area" type="text" name="cloths_details">
+                                        <label>Image</label> </label>
+                                        <input class="field" type="file" name="cloths_image">
+                                        <label> price </label>
+                                        <input class="field" type="text" name="cloths_price">
+
+                                        <input type="submit" class="btn" value="create" />
+
+                                </form>
+                        </div>
+
+                
+        </div>
+</div>
+<!-- <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}  
+           Enter your name  <br>  
+          <input type="text" name="cloths_name"> <br> 
+          type  <br>  
+          <input type="text" name="cloths_type"> <br>
+          details  <br>  
+          <input type="text" name="cloths_details"> <br>
+          image <br>  
+          <input type="file" name="cloths_image"> <br>
+          price <br>  
+          <input type="text" name="cloths_price"> <br>
+
+          <input type="submit" class="btn btn-primary" value="create"/>
+
+        </form>   -->
+{% endblock content %}

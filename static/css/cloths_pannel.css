@@ -1,0 +1,56 @@
+h1{
+    font-style:oblique;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+.btn1{
+    background: rgb(128, 174, 180);
+    color:black;
+    width:5.5rem;
+    height: 3rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+table{
+    margin-left:3rem;
+}
+.row table{
+    border: 2px solid black;
+}
+
+.row table thead tr th{
+    font-size: 2rem;
+    font-weight: medium ;
+  
+    
+    color: rgb(24, 19, 29);
+   
+}
+
+.row table tbody tr td{
+    font-size: 2rem;
+    font-weight: 100;
+    font-weight: medium;
+    color:black;
+  
+
+}
+.row thead th{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.edit .delete{
+    width:5rem;
+}
+.edit{
+    background-color: cornflowerblue;
+}
+.delete{
+    background-color:red;
+}
+.edit:hover, .delete:hover{
+    background-color: cornsilk;
+    color: black;
+}

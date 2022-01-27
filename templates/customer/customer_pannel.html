@@ -1,0 +1,47 @@
+{% extends 'adminn/admin.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/cloths_pannel.css' %}">
+
+<h1>Customer Section </h1>
+<div class="col-lg-10">
+<button onclick="Redirect()" class="btn1">add <i class="fa fa-plus" aria-hidden="true"></i></button>
+<div class="row">
+<table class="table">
+    <thead>
+      <tr>
+        
+        {{costomer.customer_name}}
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">email</th>
+        <th scope="col">address</th>
+        <th scope="col">Action</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+        {% for customer in customers %}
+      <tr>
+     
+        <td>{{customer.customer_id}}</td>
+        <td>{{customer.customer_name}}</td>
+        <td>{{customer.customer_email}}</td>
+        <td>{{customer.customer_address}}</td>
+       
+        
+        <td>
+            <a href="c_edit/{{customer.customer_id}}" class="btn btn-secondary edit">edit <i class="fas fa-edit"></i></a>
+            <a href="c_delete/{{customer.customer_id}}" class="btn btn-danger delete">delete <i class="fa fa-trash" aria-hidden="true"></i></a> 
+        
+            </td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+{% endblock content %}

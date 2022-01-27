@@ -1,0 +1,23 @@
+{% extends 'adminn/admin.html' %}
+{% load static %}
+{% block content %}
+<h1>booking form</h1>
+<h1>{{book.cloths_name}}</h1>
+<h1>{{request.session.customer_id}}</h1>
+<form action="" method="POST" >
+    {% csrf_token %}  
+    cloth_id <br>  
+  <input type="text" name="cloth" value={{book.cloths_id}}> <br> 
+  consumer_id<br>  
+  <input type="text" name="consumer" value={{request.session.customer_id}}> <br>
+  email <br>  
+  <input type="text" name="email"> <br>
+  date<br>  
+  <input type="date" name="start_date"> <br>
+  day<br>  
+  <input type="text" name="days"> <br>
+
+  <input type="submit" class="btn btn-primary" value="create"/>
+
+</form> 
+{% endblock content %}

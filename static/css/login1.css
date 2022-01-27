@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family:"open sans";
+    color:rgb(252, 246, 246);
+    background-color: #f4c7c7;
+}
+
+body img{
+    width: 100%;
+    height:calc(100vh - 2px)
+}
+
+section{
+    position:relative;
+    width: 100%;
+    height:calc(100vh - 20px);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 45px;
+    
+    
+  
+    
+}
+.form-container{
+    position:absolute;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(rgba(218, 144, 95, 0.3),rgba(218, 60, 60, 0.3));
+    width:380px;
+    padding:50px 30px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 60px #fff;
+   
+  
+  
+}
+h1{
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2rem;
+   
+}
+ .input-feild{
+    max-width:380px;
+    /* width:100%; */
+    height:40px;
+    background-color:white;
+    margin:10px 0;
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns:11% 85%;
+    padding: 0;
+   
+}
+
+.input-feild i{
+    color:black;
+    text-align: center;
+    padding-top: 36%;
+    font-size: 1.2rem;
+    padding-left: 34%;
+}
+
+ .input-feild input{
+   
+    display:block;
+    padding:10px;
+    color: #222;
+    border:none;
+    outline: none;
+    border-radius: 45%;
+    font-weight: 100;
+
+}
+
+
+
+.control input[type="submit"]{
+    border:#f4c7c7 3px solid;
+    border-radius: 40px;;
+    color:black;
+    text-transform: uppercase;
+    font-size:1.2em;
+   
+    display: block;
+    margin: 10px 0;
+    padding:0 4%  0 4% ;
+    height: 2%;
+    margin-left: 35%;
+    
+}
+
+.control input[type="submit"]:hover{
+    opacity:1;
+    background-color: #f4c7c7;
+}
+.link{
+    text-align: center;
+}
+
+.link a{
+    text-decoration: none;
+    color:#fff;
+    opacity: .6;
+    
+    
+}
+
+.link a:hover{
+    opacity:1
+}
+
+.register{
+    display: flex;
+    margin-left: 12%;
+    margin-top: 5%;
+    
+    
+}
+.register p{
+    margin-right: 2%;
+}
+.register a{
+    text-decoration: none;
+    opacity: .7;
+}
+
+.register a:hover{
+    
+    opacity: 1;
+}
+
+@media(max-width:870px){
+    img{
+        display:none
+    }
+}
+
+@media(max-width: 570px){
+    img{
+        display:none;
+    }
+    
+}
+
