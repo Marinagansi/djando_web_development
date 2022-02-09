@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap');
+
 html{
     font-size: 62.5%;
  
@@ -25,6 +27,7 @@ html{
     height: 50rem;
     display: flex;
     justify-content: center;
+    background-attachment:fixed;
     align-items : flex-end;
     overflow: hidden;
 }
@@ -47,7 +50,7 @@ html{
     line-height: 55px;
     letter-spacing: 5px;
     font-family:poppins;
-    text-transform: uppercase;
+    color:indianred;
     margin-bottom: 7px;
     padding: 3rem 2rem;
     border-radius: 0.25rem;
@@ -92,6 +95,7 @@ html{
 .heading h1{
     font-size: 3.5rem;
     color:#525C91;
+    font-family: 'Pacifico', cursive;
 
 }
 .heading p{
@@ -135,6 +139,7 @@ html{
 }
 .reviews h1{
     margin-top: 0%;
+    font-family: 'Pacifico', cursive;
 }
 .reviews .slide .user img {
     height: 7rem;
@@ -175,4 +180,31 @@ html{
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
   }
+  .blog{
+     
+      padding-top:0%
+  }
   
+  .blog h1{
+    font-size: 3.5rem;
+    color:#525C91;
+    text-align:center;
+    font-family: 'Pacifico', cursive;
+
+  }
+  .blog .picss{
+    height:30rem;
+    width:40rem;
+    object-fit: cover;
+  }
+
+  .blog p{
+    margin: 1rem auto;
+    font-size: 1.7rem;
+    color:#33353b;
+    /* max-width:70rem; */
+    line-height: 2;
+    margin-left: 2rem;
+    margin-right: 2rem;
+   
+  }

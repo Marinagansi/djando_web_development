@@ -4,15 +4,13 @@
     box-sizing:border-box;
     
 }
-body{
-  background-color:rgb(230, 207, 207) ;  
-}
+
 
 .no-gutters{
     margin-top: 5rem;
 }
 .row{
-    background:white;
+    background:rgb(209, 176, 176);
     border-radius:30px;
 }
 img{
@@ -20,14 +18,14 @@ img{
     border-bottom-left-radius:30px;
 }
 
-h1{
+.headings h1{
     font-family:'Pacifico',cursive;
     font-size:2.5rem;
     color:red
 }
 
 .pic{
-    width:25rem;
+    width:40rem;
 }
 
 .form-control{
@@ -44,7 +42,7 @@ label{
     border:none;
     outline:none;
     width:20rem;
-    background-color: rgb(223, 188, 188);
+    background-color: rgb(107, 81, 81);
     color: black;
     margin-bottom: 2rem;
 

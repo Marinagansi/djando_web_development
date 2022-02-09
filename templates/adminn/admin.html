@@ -10,42 +10,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="{% static '/css/adminnn.css' %}">
+    <link rel="stylesheet" href="{% static '/css/adminnn1.css' %}">
+    <title>Admin pannel</title>
 
 </head>
 
 <body>
-    <!-- header -->
-    <header class="form-inline heading ">
-        <h1>Admin pannel</h1>
-    </header>
-    <div class="container-fluid">
-        <div class="row">
-            <div class=" vertical-nav col-lg-2 col-md-6 p-0">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active " href="/booking/booking_pannel">Booking <i class="fas fa-book"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/customer/c_pannel">customer <i class="fa fa-user" aria-hidden="true"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/user_pannel">user</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link avtive" href="/store/cloth_pannel">cloth <i class="fas fa-tshirt"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-10">
-              
-                {% block content %}{% endblock content %}
-                
-            </div>
+
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>style look</h1>
+            <ul>
+                <li>Dashboard</li>
+                <li>Booking</li>
+                <li>User</li>
+                <li>cloth</li>
+                <li>customer</li>
+            </ul>
         </div>
-
     </div>
-
+    
+    
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>

@@ -1,4 +1,4 @@
-{% extends 'adminn/admin.html' %}
+{% extends 'adminn/admin2.html' %}
 {% load static %}
 {% block content %}
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -13,9 +13,9 @@ integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6J
                                 <h2>Update Booking</h2>
                                 <form action="/booking/booking_update/{{books.booking_id}}" class="form" method="POST" >
                                         {% csrf_token %}
-                                        {{books.booking_id}}
+                                      
                                        <label> Booking </label>
-                                        <input class="field" type="text" name="booking_id" value="{{books.booking_id}}"> -->
+                                        <input class="field" type="text" name="booking_id" value="{{books.booking_id}}"> 
                                        
                                       <label>customer id</label>
                                         <input class="field" type="text" name="consumer" value="{{books.consumer.customer_id}}">

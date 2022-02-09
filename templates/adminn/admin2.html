@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static '/css/admin2.css' %}">
+    <title>Admin pannel</title>
+    
+</head>
+
+<body>
+
+
+   
+
+</body>
+
+</html> <div class="container-fluid">
+    <div class="row ">
+        <div class=" vertical-nav col-lg-2 col-md-12 col-sm-12p-0 sidebar ">
+            <ul class="nav flex-column">
+                <h1>style look</h1>
+                <h2>Dashboard <i class="icon-dashboard"></i> </h2>
+                
+                <li class="nav-item">
+                
+                    
+                    <a class="nav-link active " href="/booking/booking_pannel">Booking <i class="fas fa-book"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/customer/c_pannel">customer <i class="fa fa-user" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/user_pannel">user <i class="fa fa-users" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link avtive" href="/store/cloth_pannel">cloth <i class="fas fa-tshirt"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link avtive" href="/contact/message">Messages <i class="fas fa-envelope-open-text"></i></a>
+                </li>
+                <li class="nav-item"> <a class="dropdown-item" href="/customer/signout">logout</a> 
+                </li>
+            </ul>
+        </div>
+    
+        <div class="col-lg-10 data">
+
+            {% block content %}{% endblock content %}
+            
+        </div>
+    </div>
+
+</div> 

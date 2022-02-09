@@ -11,7 +11,7 @@ body{
 }
 
 .container{
-    position:realtive;
+    position:relative;
     display:flex;
     justify-content:center;
     align-items:Center;

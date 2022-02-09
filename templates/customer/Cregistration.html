@@ -17,45 +17,45 @@
         <img src="{% static 'assets/registration.png' %}">
         <div class="form-container">
             <h1>Customer Register Form</h1>
-            <form action="" method="POST">
+            <form action="" method="POST" onsubmit="return validate()">
                 {% csrf_token %}
                 <div class="control">
                     <label for="name">Name</label>
                     <div class="input-feild" >
-                        <i class="fas fa-user-alt"></i>	</i><input type="text" name="customer_name" id="customer_name" placeholder="Full Name" required>
+                        <i class="fas fa-user-alt"></i>	</i><input type="text" onKeyUp="validate()" name="customer_name" id="customer_name" placeholder="Full Name" >
                     </div>
 
                 </div>
+                <!--Message Validation-->
+						<div class="message ml-4"></div>
                 <div class="control">
                     <label for="email">Email</label>
                     <div class="input-feild" >
-                        <i class="fa fa-envelope"></i> <input type="email" name="customer_email" id="customer_email" placeholder="abc@gmail.com" >
+                        <i class="fa fa-envelope"></i> <input type="email" onKeyUp="validate()" name="customer_email" id="customer_email" placeholder="abc@gmail.com" >
                     </div>
 
                 </div>
+                <!--Message Validation-->
+						<div class="message ml-4"></div>
                 <div class="control">
                     <label for="psw">address</label>
                     <div  class="input-feild" >
-                        <i class="fas fa-address-card"></i> <input type="text" name="customer_address" id="customer_address" placeholder="Address" required>
+                        <i class="fas fa-address-card"></i> <input type="text" onKeyUp="validate()" name="customer_address" id="customer_address" placeholder="Address">
                     </div>
 
                 </div>
+                <!--Message Validation-->
+						<div class="message ml-4"></div>
                 <div class="control">
                     <label for="psw">password</label>
                     <div  class="input-feild" >
-                        <i class="fas fa-lock"></i> <input type="password" name="customer_password" id="customer_password" placeholder="password" required>
+                        <i class="fas fa-lock"></i> <input type="password" onKeyUp="validate()" name="customer_password" id="customer_password" placeholder="password">
                     </div>
 
                 </div>
-
-                <div class="control">
-                    <label for="psw">confirm password</label>
-                    <div  class="input-feild" >
-                        <i class="fas fa-lock"></i> <input type="password" placeholder="confirm-password" required>
-                    </div>
-
-                </div>
-
+<!--Message Validation-->
+<div class="message ml-4"></div>
+        
                 <div class="control">
                     <input type="submit" value="Register">
                 </div>
@@ -68,6 +68,6 @@
     </section>
     
 </body>
-
+<script src="{% static 'js/registration.js' %}"></script>
 
 </html>

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static '/css/all.min.css' %}">
-  <link rel="stylesheet" href="{% static '/css/nav.css' %}">
+  <link rel="stylesheet" href="{% static '/css/nav1.css' %}">
   <title>nav</title>
   
 </head>
@@ -17,7 +17,7 @@
 <body>
   <!-- navbar -->
   <header class="header">
-    <nav class="navbar navbar-expand-lg  bg-light">
+    <nav class="navbar navbar-expand-lg  bg-light" >
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Stlye Look</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -28,17 +28,28 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+            <!-- searchbar -->
+        <form action="/store/searched" class="search-form" method=POST>
+          {% csrf_token %}
+          
+          <label for="search-box" class="fas fa-search srch"></label>
+          <input type="search" name="searched" placeholder="search here..." id="search-box">
+          
+          <input class="search" type="submit" value="search">
+   
+      </form>
+       <!-- searchbar -->
             <li class="nav-item">
               <a class="nav-link " aria-current="page" href="/home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
+              <a class="nav-link" href="/home#blog">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/store/shop">Hire</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Rules</a>
+              <a class="nav-link" href="/store/shop#about">Rules</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contact/contact">Contact us</a>
@@ -49,8 +60,9 @@
                 {{request.session.customer_name}}
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="logout">logout</a></li>
-                <li><a class="dropdown-item" href="#">culture</a></li>
+                <li><a class="dropdown-item" href="/booking/user_profile/{{request.session.customer_id}}">History</a></li>
+                
+                <li><a class="dropdown-item" href="/customer/signout">logout</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
@@ -69,11 +81,45 @@
     {% block content%} {% endblock content %}
   </div>
 
-<section class="footer"> 
-  <hr>
+<!-- footer section start -->
+<section class="footer">
+  <div class="box-container">
+      <div class="box">
+        <h3>quick links</h3>
+        <a class="link" href="#team"> <i class="fas fa-angle-right"></i> team</a>
+        <a class="link" href="#arrivals"> <i class="fas fa-angle-right"></i> arrivals</a>
+        <a class="link" href="#blogs"> <i class="fas fa-angle-right"></i> blogs</a>
+            </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+        <a class="link" href="#home"> <i class="fas fa-angle-right"></i> home</a>
+        <a class="link" href="#shop"> <i class="fas fa-angle-right"></i> shop</a>
+        <a class="link" href="#gallery"> <i class="fas fa-angle-right"></i> gallery</a>
+       
+ 
+      
+       </div>
+      <div class="box">
+        <h3>contact info</h3>
+        <p><i class="fas fa-phone"></i>+123-456-7890</p>
+        <p><i class="fas fa-phone"></i>+112-456-7890</p>
+      
+       
+      </div>
+
+      <div class="box">
+        <p><i class="fas fa-envelope"></i>gansimarina@gmail.com</p>
+        <p><i class="fas fa-map"></i>ktm, Nepal-100921</p>
+        
+      </div>
+  </div>
   <div class="credit"> created by <span>Marina Gansi</span> | all rights reserved! </div>
-<hr>
 </section>
+
+<!-- footer section end -->
+
+
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

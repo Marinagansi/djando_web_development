@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap');
+.history{
+    background-color: #c5c8d6;
+}
+.heading h1{
+    font-size: 3.5rem;
+    color:#525C91;
+    font-family: 'Pacifico', cursive;
+    text-align:center
+
+}
+.heading p{
+    margin: 1rem auto;
+    font-size: 2rem;
+    color:#33353b;
+    /* max-width:70rem; */
+    line-height: 2;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.container-fluid{
+    justify-content: center;
+}
+.table tbody td{
+    font-size: 1.5rem;
+}
+.table th, .table td{
+    border: 2px solid #33353b;
+}
+
+@media screen and (max-width:880px){
+    .picture img{
+        width:200px
+    }
+
+}

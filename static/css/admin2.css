@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap');
+
+.row .sidebar{
+    background-color: rgb(146, 146, 163);
+  
+}
+
+.row .sidebar h1{
+    font-family: 'Pacifico', cursive;
+    font-size:2.3rem;
+   
+}
+.row .sidebar h2{
+    border-top: 2px solid rgb(77, 77, 102);
+    color:rgb(48, 32, 32)
+}
+.row .sidebar .nav-item{
+    font-size: 1rem;
+    
+}
+.row .sidebar .nav-item  a{
+    color:white
+}
+.row .sidebar .nav-item a:hover{
+    background-color: rgb(63, 90, 95);
+}
+.data{
+  
+    height: 100vh;
+}

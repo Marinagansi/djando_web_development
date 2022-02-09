@@ -1,0 +1,77 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<link rel="stylesheet" href="{% static '/css/history.css' %}">
+<div class="history">
+<div class="heading">
+  <h1>Your dress booking history</h1>
+  <p>Hello, You have hire these beautiful</p>
+
+</div>
+ <div class="container-fluid">
+  <div class="row table-responsive-md  table-responsive-sm ml-3">
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <table class="table">
+        <thead>
+          <tr>
+          
+            <th scope="col">image</th>
+           
+            <th scope="col">date</th>
+            <th scope="col">days</th>
+         
+          
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr>
+            {% for booking in booking %}
+           <a href="{% static 'assets/' %}{{booking.cloth.cloths_image}}">Image</a>
+            <!-- <td> <img class="img-fluid  pic" src="{% static 'assets/' %}{{booking.cloth.cloths_image}}" style="width:100px"> -->
+              <td><h6>{{booking.cloth.cloths_name}}</h6>
+              <h6>Price:{{booking.cloth.cloths_price}}</h6>
+            </td>
+          
+            <td>{{booking.start_date}}</td>
+            <td>{{booking.days}}</td>
+      
+    
+          </tr>
+    
+          {% endfor %}
+          <tr>
+    
+        </tbody>
+     
+      
+      </table>
+
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 picture">
+      <img src="{% static 'assets/stylelook logo.png' %}">
+    </div>
+  </div>
+</div> 
+</div>  
+
+<!-- 
+<div class="row"> -->
+  <!-- {% for booking in booking %}
+  <div class="col-lg-3 col-md-6 col-sm-12 text-center contents ">
+      <img class="img-fluid   pic"  src="{% static 'assets/' %}{{booking.cloth.cloths_image}}" style="width:100px">>
+      <div class="info">
+          <h4 style>{{ booking.email }}</h4>
+          <p>{{booking.start_date}}</p>
+          <p class="price">{{booking.days}}</p>
+          
+          <a href="/store/cloth_details/{{store.cloths_id}}" class="btns">Hire Now</a>
+      </div>
+  </div>
+  {% endfor %}
+</div> -->
+
+  {% endblock content %}

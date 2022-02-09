@@ -1,32 +1,12 @@
+{% extends 'adminn/admin2.html' %}
 {% load static %}
+{% block content %}
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="{% static '/css/edit.css' %}">
+<link rel="stylesheet" href="{% static '/css/cloth_edit.css' %}">
 
-    <!-- <img class="img-fluid  img-thumbnail pic" src="{% static 'assets/' %}{{cloths.cloths_image}}" >
+    
 
-
-<form action="/cloth_update/{{cloths.cloths_id}}" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}  
-   Enter your name  <br>  
-   <div class="input-group md-form form-sm">
-    <div class="input-group-append mt-2" >
-        <label class=" col-lg-6 col-md-4 col-sm-4 required">Decoration Name:</label>
-        <input type="text"  id="name" class="form-control col-lg-10" value="{{cloths.cloths_details}}">
-    </div>
-</div>
-  <input class="form-control" type="text" name="cloths_name" value="{{cloths.cloths_name}}"> <br> 
-  type  <br>  
-  <input  class="form-control"  type="text" name="cloths_type" value="{{cloths.cloths_type}}"> <br>
-  details  <br>  
-  <input class="form-control" maxlength="200" type="text" name="cloths_details" value="{{cloths.cloths_details}}" style="width:450px"> <br>
-  image <br>  
-  <input class="form-control"  type="file" name="cloths_image" > <br>
-  price <br>  
-  <input  class="form-control" type="text" name="cloths_price"  value="{{cloths.cloths_price}}"> <br>
-
-  <input type="submit" class="btn btn-primary" value="create"/>
-</form>  -->
 <body>
 <section class="Form my-4 mx-5">
     <div class="container">
@@ -35,7 +15,7 @@ integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6J
                 <img class="img-fluid   pic" src="{% static 'assets/' %}{{cloths.cloths_image}}" >
 
             </div>
-            <div class="col-lg- 7 px-3 pt-5">
+            <div class="col-lg- 7 px-3 pt-5 headings">
                 <h1 class="py-2">Style look</h1>
                 <h5>Update Cloth Section</h5>
                 <form action="/cloth_update/{{cloths.cloths_id}}" method="POST" enctype="multipart/form-data">
@@ -93,3 +73,5 @@ integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6J
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
     crossorigin="anonymous"></script>
+
+  {% endblock content %}

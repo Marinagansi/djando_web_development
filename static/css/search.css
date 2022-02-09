@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap');
+
+html{
+    font-size: 62.5%;
+ 
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+    html::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    html::-webkit-scrollbar-track{
+       background: transparent;
+    }
+
+    html::-webkit-scrollbar-thumb{
+        background: #f4c7c7;
+     } 
+
+ section{
+     padding: 5rem 9%;
+ }
+.row{
+    margin: 4rem 4rem 4rem 4rem;
+}
+
+.row .contents img{
+    height:47rem;
+    width:37rem;
+    object-fit: cover;
+}
+.row .contents .info{
+   margin-bottom: 3rem;
+    color: #383131;
+    font-size:larger;
+    font-style:italic;
+    
+    
+}
+.row .contents .info h4{
+    font-weight: Bold;
+}
+.row .contents .info p{
+    margin-bottom: 0rem;
+    font-style: oblique;
+    font-weight: Bold;
+}
+.row .contents img:hover{
+    transform:scale(1.1)
+}
+
+.btns{
+    width:7rem;
+    height: 4rem;
+    background-color: #e2acac;
+    color: black;
+    font-weight:bold;
+    text-align: center;
+}
+
+h1{
+    font-size: 3.5rem;
+    color:#525C91;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap');
+
 html{
     font-size: 62.5%;
  
@@ -20,14 +22,16 @@ html{
      padding: 5rem 9%;
  }
 .row{
-    margin: 4rem 4rem 4rem 4rem;
+    margin: 7rem 7rem 1rem 7rem;
 }
 
 
+
 .row .contents img{
-    height:47rem;
-    width:37rem;
+    height:40rem;
+    width:30rem;
     object-fit: cover;
+    transition: transform ease 0.3s;
 }
 .row .contents .info{
    margin-bottom: 3rem;
@@ -49,12 +53,13 @@ html{
     transform:scale(1.1)
 }
 .about{
-    background: url(/static/assets/home-pic2.png)  no-repeat;
+    background: url(/static/assets/blog1.jpeg)  no-repeat;
     background-size: cover;
     background-position: center ;
     background-attachment:fixed;
     display: flex;
     align-items:center;
+    object-fit: cover;
     margin: 4rem 4rem 4rem 4rem;
     height: 40rem;
 }
@@ -64,13 +69,16 @@ html{
     background:white;
     padding:3rem;
     margin-bottom: 2rem;
-    height: 30rem;
+    height: 35rem;
 }
 
 .about .content span{
     color:#801c1c;
     font-size: 2rem;
 
+}
+.about  .content ol{
+    font-size:1.5rem;
 }
 .about .content h3{
 padding-top: 1rem;
@@ -101,6 +109,7 @@ padding-top: 1rem;
 .heading h1{
     font-size: 3.5rem;
     color:#525C91;
+    font-family: 'Pacifico', cursive;
 
 }
 .heading p{
@@ -121,3 +130,23 @@ padding-top: 1rem;
     font-weight:bold;
     text-align: center;
 }
+
+@media screen and (max-width:550px)
+
+{
+    .about  .content{
+        padding: none;
+        margin-bottom:0rem;
+    }
+    .about .content li{
+        font-size:1rem
+    }
+    .about .content h3{
+        padding-top: 0rem;
+        font-size: 1rem;
+    }
+    .about .content span{
+        font-size: 1rem;
+    }
+}
+

@@ -1,58 +1,132 @@
-{% extends 'adminn/admin.html' %}
+{% extends 'adminn/admin2.html' %}
 {% load static %}
 {% block content %}
 <link rel="stylesheet" href="{% static '/css/cloths_pannel.css' %}">
-<h1>Booking Section</h1>
 
-    <button onclick="Redirect()" class="btn1">add <i class="fa fa-plus" aria-hidden="true"></i></button>
-    <div class="row">
-      
-            <table class="table" style="margin-left: 0%;">
-                <thead>
-                  <tr>
-                    <th scope="col">ID</th>
-                    
-                    <th scope="col">Cloth</th>
-                    <th scope="col">Customer</th>
-                    <th scope="col">Email Address</th>
-                    <th scope="col">Start date</th>
-                    <th scope="col">Total days</th>
-                    <th scope="col">Action</th>
-                   
-                   
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for booking in books %}
-                  <tr>
-                    <th >{{booking.booking_id}}</th>
-                    <td>{{booking.cloth.cloths_id}}<br>
-                      {{booking.cloth.cloths_name}}<br>
-                      {{booking.cloth.cloths_type}}<br>
-                      {{booking.cloth.cloths_price}}<br>
-                    </td>
-                   
-                    <td>{{booking.consumer.customer_id}}<br>
-                      {{booking.consumer.customer_name}}<br>
-                      {{booking.consumer.customer_email}}<br>
-                      {{booking.consumer.customer_address}}<br>
-                    </td>
-                    <td>{{booking.email}}</td>
-                    <td>{{booking.start_date}}</td>
-                    <td>{{booking.days}}</td>
-                    
-                    <td>
-                        <a href="/booking/booking_edit/{{booking.booking_id}}" class="btn btn-secondary edit">edit <i class="fas fa-edit"></i></a>
-                        <a href="booking/booking_delete/{{booking.booking_id}}" class="btn btn-danger delete">delete <i class="fa fa-trash" aria-hidden="true"></i></a>
-                    </td>
-                  </tr>
-                  {% endfor %}
-                  
-                </tbody>
-              </table>
-        </div>
- 
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 col-md-6 col-sm-12">
+      <h1 class="h1">Admin pannnel </h1>
+    </div>
   </div>
+
+
+  <div class="row sum">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="headers" style="display:flex">
+        <div class="total">
+          <div class="icon" >
+           <img src="{% static 'assets/total_customer.png' %}" style="width:70px;margin-top: 1rem;">
+          </div>
+   
+          <h1>{{ customer_count }}</h1>
+          <h2>Total customer</h2>
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="headers" style="display:flex">
+        <div class="total">
+          <div class="icon" >
+            <img src="{% static 'assets/total_booking.png' %}" style="width:70px;margin-top: 1rem;">
+           </div>
+          <h1>{{booking_count}}</h1>
+          <h2>Total Booking</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="headers" style="display:flex">
+        <div class="total">
+          <div class="icon" >
+            <img src="{% static 'assets/total_dress.png' %}" style="width:70px;margin-top: 1rem;">
+           </div>
+          <h1>{{cloths_count}}</h1>
+          <h2>Total Dress</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h4>Booking data information</h4>
+  <div class="row">
+
+    <div class="row table-responsive-md  table-responsive-sm ml-3">
+
+      <table class="table table table-bordered table-hover table-bordered table-striped" style="margin-left: 0%;">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+
+            <th scope="col">Cloth</th>
+            <th scope="col">Customer</th>
+            <th scope="col">Email Address</th>
+            <th scope="col">Start date</th>
+            <th scope="col">Total days</th>
+            <th scope="col">Action</th>
+
+
+          </tr>
+        </thead>
+        <tbody>
+          {% for booking in books %}
+          <tr>
+            <th>{{booking.booking_id}}</th>
+            <td>{{booking.cloth.cloths_id}}<br>
+              {{booking.cloth.cloths_name}}<br>
+              {{booking.cloth.cloths_type}}<br>
+              {{booking.cloth.cloths_price}}<br>
+            </td>
+
+            <td>{{booking.consumer.customer_id}}<br>
+              {{booking.consumer.customer_name}}<br>
+              {{booking.consumer.customer_email}}<br>
+              {{booking.consumer.customer_address}}<br>
+            </td>
+            <td>{{booking.email}}</td>
+            <td>{{booking.start_date}}</td>
+            <td>{{booking.days}}</td>
+
+            <td>
+              <a href="/booking/booking_edit/{{booking.booking_id}}" class="btn btn-secondary edit">edit <i
+                  class="fas fa-edit"></i></a>
+              <a href="booking/booking_delete/{{booking.booking_id}}" class="btn btn-danger delete">delete <i
+                  class="fa fa-trash" aria-hidden="true"></i></a>
+            </td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Pagination -->
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="pagination d-flex justify-content-center">
+        <form method="POST" action="">
+          {% csrf_token %}
+          {% if page > 1 %}
+          <button class="btn" name="prev" style="background:none; "><i class="fas fa-backward"
+              style="font-size: 1.5rem;"></i></button>
+          {% endif %}
+          <input readonly class="text-center p-1" value="{{page}}"
+            style="width:3rem; border:4px solid black;font-size: 1rem;" name="page" />
+          {% if pageItem == 2 %}
+          <button name="next" class="btn" style="background:none; "><i class="fas fa-forward"
+              style="font-size: 1.5rem;"></i>
+          </button>
+          {% endif %}
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <!-- <h1>bookinf pannel</h1>
 {% for booking in books %}
 <h2>{{booking.email}}</h2>

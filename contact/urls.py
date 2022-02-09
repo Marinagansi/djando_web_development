@@ -4,4 +4,5 @@ from contact import views
 
 urlpatterns = [
 path('contact',views.contactpage),
+path('message',views.message),
 ]

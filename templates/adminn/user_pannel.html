@@ -1,44 +1,74 @@
-{% extends 'adminn/admin.html' %}
+{% extends 'adminn/admin2.html' %}
 {% load static %}
 {% block content %}
-<link rel="stylesheet" href="{% static '/css/cloth_pannel.css' %}">
-<h1>User Section<h1>
-<div class="col-lg-10">
-      <div class="row">
-        <div class="col-lg-12">
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">type</th>
-                    <th scope="col">details</th>
-                    <th scope="col">price</th>
-                    <th scope="col">Action</th>
-                   
-                  </tr>
-                </thead>
-                <tbody>
-                    {% for auth_user in users %}
-                  <tr>
-                    <th scope="row">{{auth_user.username}}</th>
-                    
-                    
-                    <td>
-                        <a href="user_edit/{{auth_user.id}}" class="btn btn-secondary edit">edit <i class="fas fa-edit"></i></a>
-                        <a href="cloth_delete/{{store.cloths_id}}" class="btn btn-danger delete">delete <i class="fa fa-trash" aria-hidden="true"></i></a>
-                    </td>
-                  </tr>
-                  {% endfor %}
-                  
-                </tbody>
-              </table>
-        </div>
+<link rel="stylesheet" href="{% static '/css/cloths_pannel.css' %}">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 col-md-6 col-sm-12">
+      <h1 class="h1">Admin pannnel </h1>
     </div>
-    <script>
-      function Redirect() {
-        window.location = "storeform"
-      }
-    </script>
-    {% endblock content %}
+  </div>
+
+
+  <div class="row sum">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="headers" style="display:flex">
+        <div class="total">
+          <h1>{{ total_count }}</h1>
+          <h2>Total customer</h2>
+        </div>
+      </div>
+    </div>
+ </div>
+
+
+
+  <div class="row">
+    <div class="table-responsive-md  table-responsive-sm ml-3">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Action</th>
+
+
+          </tr>
+        </thead>
+        <tbody>
+          {% for auth_user in users %}
+          <tr>
+            <th scope="row">{{auth_user.id}}</th>
+            <th scope="row">{{auth_user.username}}</th>
+            <th scope="row">{{auth_user.email}}</th>
+            <th scope="row">{{auth_user.first_name}}</th>
+            <th scope="row">{{auth_user.last_name}}</th>
+
+
+
+            <td>
+              <a href="user_edit/{{auth_user.id}}" class="btn btn-secondary edit">edit <i class="fas fa-edit"></i></a>
+              <a href="user_delete/{{auth_user.id}}" class="btn btn-danger delete">delete <i class="fa fa-trash"
+                  aria-hidden="true"></i></a>
+            </td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+      <button onclick="Redirect()" class="btn1">add <i class="fa fa-plus" aria-hidden="true"></i> </button>
+    </div>
+  </div>
+
+</div>
+<script>
+  function Redirect() {
+    window.location = "registration"
+  }
+</script>
+{% endblock content %}

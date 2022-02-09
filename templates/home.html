@@ -3,21 +3,24 @@
 {% block content %}
 
 <!-- custome link -->
-<link rel="stylesheet" href="{% static '/css/home.css' %}">
+<link rel="stylesheet" href="{% static '/css/home7.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <!-- wraper text -->
-<div class="wrapper">
-  <img src="{% static 'assets/intro1.png' %}" alt="" class="image-wrapper">
-  <div class="wrapper-text">
-    <h4>Make you occassion special</h4>
-    <h5>style look</h5>
+
+  <div class="wrapper">
+    <img src="{% static 'assets/intro1.png' %}" alt="" class="image-wrapper">
+    <div class="wrapper-text">
+      <h4>Make you occassion special</h4>
+      <h5>style look</h5>
+    </div>
   </div>
-</div>
+
+
 <!-- wraper text end-->
 
 <div class="heading">
-  <h1>Dress Hire</h1>
+  <h1><u>Dress Hire</u></h1>
   <p>A convenient and cost-effective way of choosing clothes, renting is the way to go. This is more likely the most
     important reason why people choose to rent. Almost everybody has bought a dress and ended up only using it once or
     twice. If people hire the clothes they can wear for at the onetime and return no need to store them in their closet
@@ -29,26 +32,53 @@
   <div class="col-lg-4 col-md-6 col-sm-12 text-center p-3">
     <img class="img-fluid   pics" src="{% static 'assets/dress1.jpg' %}">
     <h3>Influence by western culture</h3>
+    <h4>Yubi Thapa</h4>
     <button class="btn" onclick="Redirect()">See more</button>
   </div>
 
   <div class="col-lg-4  col-md-6 col-sm-12  text-center p-3">
     <img class="img-fluid  pics " src="{% static 'assets/dress3.jpg' %}">
     <h3>The golden sherwani</h3>
+    <h4>Anu shrestha</h4>
     <button class="btn" onclick="Redirect()">See more</button>
   </div>
   <div class="col-lg-4 col-md-6 col-sm-12  text-center p-3">
     <img class="img-fluid  pics" src="{% static 'assets/dress2.jpg' %}">
     <h3>Blue lehenga</h3>
+    <h4>Manish Rai</h4>
     <button class="btn" onclick="Redirect()">See more</button>
   </div>
 
 </div>
+<hr>
 
+<section class="blog" id="blog">
+  <h1><u>BLOG</u></h1>
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-12 text-center p-3">
+    <img class="img-fluid  picss" src="{% static 'assets/blog2.jpeg' %}">
+    </div>
+    <div class="col-lg-8 col-md-6 col-sm-12 text-center p-3 ">
+    <p>One of the easiest and best rental services we’ve found is By Rotation. By Rotation is a membership-based, peer-to-peer service, meaning that the business doesn’t actually own the stock, you sign up to loan or rent from other ‘peers’. By Rotation is still quite fresh to the rental industry, but they are taking it by storm and are one of the most popular options available.
+
+      The founder, Eshita Kabra-Davies wants to aid style-savvy consumers to rethink their environmental impact. The app is uber accessible and allows both renters and lenders to list and purchase in minutes - a great way to make a little extra money too.</p>
+      </div>
+</div>
+<div class="row">
+  
+    <div class="col-lg-8 col-md-6 col-sm-12 text-center p-3">
+    <p>One of the easiest and best rental services we’ve found is By Rotation. By Rotation is a membership-based, peer-to-peer service, meaning that the business doesn’t actually own the stock, you sign up to loan or rent from other ‘peers’. By Rotation is still quite fresh to the rental industry, but they are taking it by storm and are one of the most popular options available.
+
+      The founder, Eshita Kabra-Davies wants to aid style-savvy consumers to rethink their environmental impact. The app is uber accessible and allows both renters and lenders to list and purchase in minutes - a great way to make a little extra money too.</p>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 text-center p-3">
+        <img class="img-fluid  picss" src="{% static 'assets/blog1.jpeg' %}">
+        </div>
+</section>
 <!-- team section start -->
 <div class="heading">
   <hr>
-  <h1>Our Team</h1>
+  <h1><u>Our Team</u></h1>
   <p>We are surrounded with highly qualified team</p>
 
 </div>
@@ -87,7 +117,7 @@
 <!-- review section start -->
 <section class="reviews">
   <div class="heading">
-    <h1>Customer Reviews</h1>
+    <h1><u>Customer Reviews</u></h1>
 
   </div>
   <div class="row">
@@ -96,7 +126,7 @@
       <div class="user">
         <img src="{% static 'assets/anu sth.jpeg' %}" alt="">
         <div class="info">
-          <h3>john deo</h3>
+          <h3>Ashleigh,Melbourne</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -106,15 +136,14 @@
           </div>
         </div>
       </div>
-      <p class="text">Very good quality product. Convinence to use and apply with proper direction. well
-        given details and summary about the product and can have with low cost</p>
+      <p class="text">Every experirence i've had with Dress Hire has been nothing but amazing! So helpful and friendly always making sure you find the perfect piece.The Red dress has become one of the my favourites it fit perfectly and so flattering on the body!can't wait to hire again very soon</p>
     </div>
 
     <div class=" col-lg-4 col-md-6 col-sm-12 slide">
       <div class="user">
         <img src="{% static 'assets/yubi thapa.jpeg' %}" alt="">
         <div class="info">
-          <h3>john deo</h3>
+          <h3>Kass</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -124,14 +153,13 @@
           </div>
         </div>
       </div>
-      <p class="text">I use this product daily and compared to most other foundations i have used, this is
-        absoslutly favourites i has such a smooth finish</p>
+      <p class="text">I've hired multiple ottfits before and i'm alwyas so happy with them.They arrive with plenty of time,are in immaculate condition, always fit and of course look absolutely amazing!I wouldn't want to hire from anywhere else</p>
     </div>
     <div class=" col-lg-4 col-md-6 col-sm-12 slide">
       <div class="user">
         <img src="{% static 'assets/yubi thapa.jpeg' %}" alt="">
         <div class="info">
-          <h3>john deo</h3>
+          <h3>Mackenzie</h3>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -141,8 +169,7 @@
           </div>
         </div>
       </div>
-      <p class="text">I use this product daily and compared to most other foundations i have used, this is
-        absoslutly favourites i has such a smooth finish</p>
+      <p class="text">Love style look, the best hiring website! There is wide range of outfit an dresess for every occassion.The team is always so helpful and such and easy site to se! Dresshireu has been saving me money because it has stopped me from buying deisgner cloths i only wear once !</p>
     </div>
   </div>
 </section>

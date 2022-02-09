@@ -1,0 +1,38 @@
+{% extends 'nav.html' %}
+{% load static %}
+{% block content %}
+
+
+<link rel="stylesheet" href="{% static '/css/search.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+{% if searched %}
+
+
+<h1>you searched for....{{ searched }}</h1>
+<br/>
+
+
+<div class="row">
+    {% for store in venues %}
+    <div class="col-lg-3 col-md-6 col-sm-12 text-center contents ">
+        <img class="img-fluid   pic" src="{% static 'assets/' %}{{store.cloths_image}}">
+        <div class="info">
+            <h4 style>{{store.cloths_name}}</h4>
+            <p>{{store.cloths_type}}</p>
+            <p class="price">{{store.cloths_price}}</p>
+            
+            <a href="/store/cloth_details/{{store.cloths_id}}" class="btns">Hire Now</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+{% else %}
+<h1>nothing to saerch</h1>
+
+{% endif %}
+{% endblock content %}

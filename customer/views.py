@@ -2,6 +2,10 @@ from django.shortcuts import render,redirect
 from customer.forms import CustomerForm,CustomerUpdateForm
 from customer.models import Customer
 from django.contrib import messages
+from booking.models import Booking
+from store.models import Cloths
+from django.core.mail import send_mail
+
 
 
 # Create your views here.
@@ -10,10 +14,25 @@ def customerform(request):
     print(request.FILES)
     if request.method=="POST":
         customers=CustomerForm(request.POST,request.FILES)
+        if customers.is_valid():
+            try:
         # customers.save()
-        result = customers.save()
-        request.session['customer_id']=result.customer_id
-        return redirect ("/home")
+                result = customers.save()
+                f_name = request.POST['customer_name']
+                f_email = request.POST['customer_email']
+
+                send_mail(
+                    f_name, #subject
+                    'Welcome to stylelook you have been register' , #message'h
+                    f_email, #from email
+                    ['gansimarina@gmail.com'], # To Email
+
+                 )
+                request.session['customer_id']=result.customer_id
+                return redirect ("/home")
+            except:
+                print("INVALID")
+        
           
 
     else:
@@ -37,6 +56,7 @@ def signin(request):
             
                 request.session['customer_id']=user.customer_id
                 request.session['customer_name']=user.customer_name
+                request.session['customer_password']=user.customer_password
             # login(request, user)
                 return redirect ("/home")
         except:
@@ -49,11 +69,30 @@ def signin(request):
 
 def customer_pannel(request):
     print(request)
+    if(request.method=="POST"):
+        page = int(request.POST['page'])
+        if('prev' in request.POST):
+            page= page-1
+        if ('next' in request.POST):
+             page=page+1
+        tempOffSet = page - 1
+        offset=tempOffSet*3
+        print(offset)
+    else:
+        offset=0
+        page=1
 
    # customers=Room.objects.raw('select * from customer')
-    customers=Customer.objects.all
+    # customers=Customer.objects.all
+    customers=Customer.objects.raw("select * from customer limit 3 offset % s",[offset])
+    pageItem=len(customers)
+    booking_count=Booking.objects.count()
+    total_count=Customer.objects.count()
+    cloths_count=Cloths.objects.count()
+    return render(request,"customer/customer_pannel.html",{'customers':customers,'page':page,'pageItem':pageItem,'total_count':total_count,'booking_count':booking_count,'cloths_count':cloths_count})
 
-    return render(request,"customer/customer_pannel.html",{'customers':customers})
+
+    # return render(request,"customer/customer_pannel.html",{'customers':customers})
 
 
 def edit(request,p_id):
@@ -81,3 +120,25 @@ def delete(request,p_id):
     customers=Customer.objects.get(customer_id=p_id)
     customers.delete()
     return redirect("/c_pannel")
+
+
+def logout_customer(request):
+    request.session.clear()
+    return render (request,"firstpage.html")
+
+
+def editp(request,name):
+    customers=Customer.objects.get(customer_name=name)
+    return render (request,"customer/clogin.html",{'customers':customers})
+
+def forget(request,name):
+    customers=Customer.objects.get(customer_name=name)
+    #bind data in form with instance of customer
+    form =CustomerUpdateForm(request.POST, instance=customers)
+    if form.is_valid():
+        try:
+            form.save()
+            return redirect("/c_pannel")
+        except:
+            print("validation false")
+    return render (request,"customer/forget_password.html",{'customers':customers})
