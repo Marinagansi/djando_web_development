@@ -35,20 +35,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Blog</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Genre
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">western</a></li>
-                <li><a class="dropdown-item" href="#">culture</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">ocassion</a></li>
-              </ul>
-            </li>
+           
             <li class="nav-item">
               <a class="nav-link" href="#">Hire</a>
             </li>
@@ -61,8 +48,22 @@
           </ul>
           <ul class="navbar-nav ml-auto">
             <!-- <a data-aos="zoom-in-left" data-aos-delay="1300" href="user_profile" class="btn">{{request.user.username}} </a> -->
-            <a data-aos="zoom-in-left" data-aos-delay="1300" href="/login" class="btn">Admin</a>
-            <a data-aos="zoom-in-left" data-aos-delay="1300" href="/customer/signin" class="btn">login</a>
+          
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fas fa-user"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+               
+                <li><a data-aos="zoom-in-left" data-aos-delay="1300" href="/customer/signin" class="btn">login</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>  <a data-aos="zoom-in-left" data-aos-delay="1300" href="/login" class="btn">Admin</a></li>
+              </ul>
+            </li>
             <!-- <button class="btn">Logout</button> -->
 
           </ul>
@@ -72,7 +73,7 @@
 
   </header>
   <div class="wrapper">
-    <img src="{% static 'assets/intro1.png' %}" alt="" class="image-wrapper">
+    <img src="{% static 'assets/intro1.png' %}" alt="" class="image-wrapper  mx-auto d-block " >
     <div class="wrapper-text">
       <h4>Make you occassion special</h4>
       <h5>style look</h5>

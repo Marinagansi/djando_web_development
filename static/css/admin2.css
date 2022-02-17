@@ -25,6 +25,7 @@
     background-color: rgb(63, 90, 95);
 }
 .data{
-  
+    /* background-image: linear-gradient(to bottom right, rgb(221, 172, 172), rgb(208, 205, 214)); */
     height: 100vh;
+   
 }

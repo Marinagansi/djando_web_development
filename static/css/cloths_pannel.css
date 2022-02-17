@@ -6,11 +6,16 @@
     text-transform: uppercase;
     height:3rem;
     color:rgb(63, 77, 78);
-    text-shadow:2px 2px 5px rgb(100, 78, 78)
+    text-shadow:2px 2px 5px rgb(63, 56, 56)
    
 }
-h4{
-    color:rgb(63, 77, 78)
+.secondheading {
+    background-color: rgb(80, 78, 76);
+    text-align: center;
+}
+.secondheading h4{
+    color:rgb(255, 255, 255)
+    
 }
 
 .tbl h1{
@@ -35,6 +40,8 @@ table{
 }
 .row table{
     border: 2px solid black;
+  
+    margin-top: 2rem;
 }
 .row table thead tr th,.row table tbody tr td{
     border: 2px solid black;   
@@ -80,11 +87,12 @@ table{
 .total{
     background-image: linear-gradient(to right, rgb(170, 175, 218) , rgb(228, 194, 194));
     height:10rem;
-    width:15rem;
+    width:25rem;
     text-align: center;
     box-sizing: border-box;
     border-radius: 23px;
-    box-shadow: 3px;
+    box-shadow:2px 2px 5px rgb(141, 136, 136);
+    margin-bottom:2rem;
 }
 .total h1{
     font-size: 1.5rem;
@@ -96,6 +104,6 @@ table{
 }
 .headers{
     margin-bottom: 1rem;
-    width:15rem;
+    width:22rem;
     
 }

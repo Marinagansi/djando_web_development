@@ -12,13 +12,15 @@
 
 </div>
  <div class="container-fluid">
-  <div class="row table-responsive-md  table-responsive-sm ml-3">
+  <div class="row table-responsive-md  table-responsive-sm ">
     <div class="col-lg-6 col-md-12 col-sm-12">
       <table class="table">
         <thead>
           <tr>
           
             <th scope="col">image</th>
+
+            <th scope="col">price</th>
            
             <th scope="col">date</th>
             <th scope="col">days</th>
@@ -30,12 +32,12 @@
     
           <tr>
             {% for booking in booking %}
-           <a href="{% static 'assets/' %}{{booking.cloth.cloths_image}}">Image</a>
+
             <!-- <td> <img class="img-fluid  pic" src="{% static 'assets/' %}{{booking.cloth.cloths_image}}" style="width:100px"> -->
-              <td><h6>{{booking.cloth.cloths_name}}</h6>
-              <h6>Price:{{booking.cloth.cloths_price}}</h6>
-            </td>
-          
+              <td>
+              <img src="{% static 'assets/' %}{{booking.cloth.cloths_image}}" style="width:100px">  
+              {{booking.cloth.cloths_name}}</br>  </td>
+              <td>Price:{{booking.cloth.cloths_price}}</td>
             <td>{{booking.start_date}}</td>
             <td>{{booking.days}}</td>
       

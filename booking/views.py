@@ -4,10 +4,13 @@ from store.models import Cloths
 from booking.forms import BookedForm,BookingUpdateForm
 from booking.models import Booking
 from customer.models import Customer
+from django.contrib import messages
+from authenticate import Authentication
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
-
+@login_required(login_url='/login')
 def booking_pannel(request):
 
     print(request)
@@ -32,6 +35,7 @@ def booking_pannel(request):
     return render(request,"booking/booking_pannel.html",{'books':books,'page':page,'pageItem':pageItem,'customer_count':customer_count,'booking_count':booking_count,'cloths_count':cloths_count})
 
 
+
 def edit(request,p_id):
     books=Booking.objects.get(booking_id=p_id)
     return render (request,"booking/booking_edit.html",{'books':books})
@@ -46,7 +50,8 @@ def book_update(request,p_id):
     if form.is_valid():
         try:
             form.save()
-            return redirect("/home")
+            messages.success(request,"data has been updated ")
+            return redirect("/booking/booking_pannel")
         except:
             print("validation false")
 
@@ -56,7 +61,8 @@ def delete(request,p_id):
     
     books=Booking.objects.get(booking_id=p_id)
     books.delete()
-    return redirect("/c_pannel")
+    messages.success(request,"data has been deleted")
+    return redirect("/booking/booking_pannel")
 
 
 def Userprofile(request,p_id):

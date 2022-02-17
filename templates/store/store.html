@@ -6,21 +6,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
-
-
-
 <!-- aboout start -->
 <section class="about" id="about">
-    <span class="message" style="margin-right: 0;">
+    <div class="message" style="margin-right: 0;">
         {% for msg in messages %}
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <strong>Hey!</strong> {{msg}}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         {% endfor %}
-
-       
-    </span>
+    </div>
     <div class="content">
 
     <span>why to choose us?</span>
@@ -57,17 +52,20 @@
 <div class="row">
     {% for store in cloths %}
     <div class="col-lg-3 col-md-6 col-sm-12 text-center contents ">
+        <div class="img-content">
         <a href="{% static 'assets/' %}{{store.cloths_image}}">
             <img class="img-fluid   pic " id="zoom-img" src="{% static 'assets/' %}{{store.cloths_image}}">
         </a>
 
         <div class="info">
-            <h4 style>{{store.cloths_name}}</h4>
-            <p>{{store.cloths_type}}</p>
-            <p class="price">{{store.cloths_price}}</p>
+            <h4 style>Dress: {{store.cloths_name}}<h4>
+            <p>design by: {{store.cloths_type}}</p>
+            <p>details: {{store.cloths_details}}</p>
+            <p class="price">price: {{store.cloths_price}}  </p>
 
             <a href="/store/cloth_details/{{store.cloths_id}}" class="btns">Hire Now</a>
         </div>
+    </div>
     </div>
     {% endfor %}
 </div>

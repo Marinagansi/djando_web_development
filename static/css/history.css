@@ -32,5 +32,12 @@
     .picture img{
         width:200px
     }
+    .heading p{
+        margin-left: 0rem;
+        margin-right: 0rem;
 
+    }
+.container-fluid{
+    margin-left: 0%;
+}
 }

@@ -54,7 +54,8 @@ ul{
     background:white;
     padding:3rem 2rem;
     height: 0rem;
-    min-height:12vh
+    min-height:12vh;
+    margin-bottom:3rem
 
 }
 
@@ -84,7 +85,7 @@ ul{
  background:#fff;
 }
 .navbar-toggler span + span{
-   margin-top:4px;
+  margin-top:4px;
   width:18px;
   margin-left: 4px;
 
@@ -98,7 +99,8 @@ ul{
     padding:2rem 1.2rem;
     font-size:1.7rem;
     position:relative;
-    font-weight: bold;
+    /* font-weight: bold; */
+    background-color: #f8f9fa;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:hover{
@@ -131,7 +133,6 @@ ul{
     background:#d6cdcd;
     display:flex;
     align-items: center;
-   
     margin-top: 1.6rem;
 
 }
@@ -283,4 +284,14 @@ label{
         font-size: 1rem;
     }
 
+    .search-form{
+      width:40rem
+    }
+  }
+
+  @media(max-width:500px){
+    .search-form{
+      width:30rem
+    }
+  
   }

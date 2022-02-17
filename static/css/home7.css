@@ -98,6 +98,9 @@ html{
     font-family: 'Pacifico', cursive;
 
 }
+.heading .row .second_content{
+    border: 1px solid #525C91;
+}
 .heading p{
     margin: 1rem auto;
     font-size: 2rem;
@@ -130,6 +133,7 @@ html{
 .row .pics{
     height:80%;
     width:40rem;
+    border-radius: 20px;
      
    
 }
@@ -208,3 +212,15 @@ html{
     margin-right: 2rem;
    
   }
+  @media screen and (max-width:550px){
+    .image-wrapper{
+        position: absolute;
+        top:0;
+        left:0;
+        width:800px;
+        height:100%;
+
+     
+    }
+
+}

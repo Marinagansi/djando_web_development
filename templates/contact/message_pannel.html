@@ -2,15 +2,16 @@
 {% load static %}
 {% block content %}
 
-<h1>customer message</h1>
+
+<h1 style="text-transform: capitalize; text-shadow: 2px 2px 2px rgb(145, 120, 120);">customer message</h1>
 <div class="row">
     {% for contact in contacts %}
-    <div class="col-lg-4 col-md-6 col-sm-12 text-center p-3">
-      <h3>{{contact.contact_name}}</h3>
-      <h3>{{contact.contact_email}}</h3>
-      <h3>{{contact.contact_phone}}</h3>
-      <h3>{{contact.contact_message}}</h3>
-      <p><input type="button" value="Submit" id="btnSubmit" onclick="myfunction(1)"></p>
+    <div class="col-lg-4 col-md-6 col-sm-12 text-center p-3" style="border:2px solid black; margin-left: 2rem; background-color:rgb(204, 204, 190);" >
+    <h3> Name: {{contact.contact_name}}</h3> 
+     <h3>Email: {{contact.contact_email}}</h3>
+   <h3> Phone:{{contact.contact_phone}}</h3>
+      <h3>Message:{{contact.contact_message}}</h3>
+      <!-- <p><input type="button" value="Submit" id="btnSubmit" onclick="myfunction(1)"></p> -->
     </div>
     {% endfor %}
     </div>
@@ -30,7 +31,7 @@
           {% endif %}
     </form>
   </div>
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
       var count =0;
       function myfunction(x){
           var X;
@@ -46,5 +47,5 @@
             }
       }
     
-    </script>
+    </script> -->
 {% endblock content %}

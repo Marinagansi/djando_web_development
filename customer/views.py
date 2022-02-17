@@ -5,9 +5,10 @@ from django.contrib import messages
 from booking.models import Booking
 from store.models import Cloths
 from django.core.mail import send_mail
+from authenticate import Authentication
 
 
-
+ 
 # Create your views here.
 # registration customer
 def customerform(request):
@@ -98,7 +99,7 @@ def customer_pannel(request):
 def edit(request,p_id):
     customers=Customer.objects.get(customer_id=p_id)
     return render (request,"customer/c_edit.html",{'customers':customers})
-
+  
 
 
 def update(request,p_id):
@@ -109,7 +110,7 @@ def update(request,p_id):
     if form.is_valid():
         try:
             form.save()
-            return redirect("/c_pannel")
+            return redirect("/customer/c_pannel")
         except:
             print("validation false")
     return render(request,"customer/c_edit.html",{'customers':customers})
@@ -119,7 +120,7 @@ def delete(request,p_id):
     
     customers=Customer.objects.get(customer_id=p_id)
     customers.delete()
-    return redirect("/c_pannel")
+    return redirect("/customer/c_pannel")
 
 
 def logout_customer(request):

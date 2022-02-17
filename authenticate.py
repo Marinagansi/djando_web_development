@@ -14,3 +14,15 @@ class Authentication:
                 messages.warning(request,'enter valid user')
             return redirect('/customer/signin')
         return wrap
+
+    def valid_user_where_id(function):
+        def wrap(request,p_id):
+            try:
+                Customer.objects.get(customer_name=request.session['customer_name'],customer_password=request.session['customer_password'])
+                return function(request)
+            except:
+                print('no authentication')
+                messages.warning(request,'enter valid user')
+            return redirect('/customer/signin')
+        return wrap
+

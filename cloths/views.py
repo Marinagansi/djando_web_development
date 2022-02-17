@@ -108,3 +108,10 @@ def delete(request,p_id):
     return redirect("/user_pannel")
 
 
+
+
+#password
+
+
+
+

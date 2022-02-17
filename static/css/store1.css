@@ -23,31 +23,59 @@ html{
  }
 .row{
     margin: 7rem 7rem 1rem 7rem;
+    
+   
 }
-
 
 
 .row .contents img{
-    height:40rem;
-    width:30rem;
-    object-fit: cover;
-    transition: transform ease 0.3s;
+    /* height:50rem;
+    width:36rem;
+    object-fit: cover; */
+    height: 38rem;
+    overflow: hidden;
+    width: 100%;
+    
+
 }
 .row .contents .info{
-   margin-bottom: 3rem;
-    color: #383131;
+    background-color: #e4e4e4;
+    margin-bottom: 3rem;
+    color: #000000;
     font-size:larger;
-    font-style:italic;
+    justify-content: center;
+    border: 1px solid #525C91;
+   
+   
+    
     
     
 }
 .row .contents .info h4{
-    font-weight: Bold;
+    /* font-weight: Bold;
+     */
+}
+.row .contents .img-content{
+    background-color: #cccccc;
+    /* margin-bottom: 0rem; */
+    /* font-style: oblique; */
+    /* font-weight: Bold; */
+    
+    
 }
 .row .contents .info p{
-    margin-bottom: 0rem;
-    font-style: oblique;
-    font-weight: Bold;
+    /* margin-bottom: 0rem; */
+    /* font-style: oblique; */
+    /* font-weight: Bold; */
+    /* padding: 1rem 0; */
+    font-size: 1.4rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0%;
+    margin-right: 7rem;
+   
+    float: left;
+    /* line-height: 2; */
+   
 }
 .row .contents img:hover{
     transform:scale(1.1)
@@ -65,16 +93,13 @@ html{
 }
 
 .about  .content{
-    width:45rem;
-    background:white;
-    padding:3rem;
-    margin-bottom: 2rem;
-    height: 35rem;
+    font-size: 2rem;
+    color: #fff;
 }
 
 .about .content span{
-    color:#801c1c;
-    font-size: 2rem;
+    color: #ffffff;
+    font-size: 3rem;
 
 }
 .about  .content ol{
@@ -82,8 +107,8 @@ html{
 }
 .about .content h3{
 padding-top: 1rem;
-    font-size:2rem;
-    color:black;
+    font-size:3rem;
+    color:#ffffff;
 
 }
 
@@ -122,13 +147,22 @@ padding-top: 1rem;
     margin-right: 2rem;
 }
 
-.btns{
-    width:7rem;
-    height: 4rem;
-    background-color: #e2acac;
-    color: black;
-    font-weight:bold;
-    text-align: center;
+.btns {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fcfcfc;
+  width: 100%;
+  border: 0.1rem solid #a7a7a7;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: #33353b;
+}
+
+.btns:hover {
+  background: #3b3a3a;
+  color: rgb(224, 224, 224);
 }
 
 @media screen and (max-width:550px)

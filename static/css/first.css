@@ -125,6 +125,7 @@ html{
 .row .pics{
     height:80%;
     width:40rem;
+    border-radius: 20px;
      
    
 }
@@ -175,3 +176,23 @@ html{
             transform: rotate(45deg);
   }
   
+
+  /* @media screen and (max-width:880px){
+    .wrapper img{
+        width:200px
+    }
+
+} */
+
+@media screen and (max-width:550px){
+    .image-wrapper{
+        position: absolute;
+        top:0;
+        left:0;
+        width:800px;
+        height:100%;
+
+     
+    }
+
+}

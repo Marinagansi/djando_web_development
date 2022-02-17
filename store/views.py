@@ -6,7 +6,7 @@ from customer.models import Customer
 from django.contrib import messages
 from django.core.mail import send_mail
 from booking.forms import BookedForm
-
+from authenticate import Authentication
 # Create your views here.
 def storeform(request): 
     print(request.FILES)
@@ -23,6 +23,7 @@ def storeform(request):
      
     return render (request,"cloth/cloth_form.html",{'stores':stores})
 
+@Authentication.valid_user
 def stores(request):
     
     print(request)
@@ -83,7 +84,7 @@ def update(request,p_id):
     if form.is_valid():
         try:
             form.save()
-            return redirect("/cloth_pannel")
+            return redirect("/store/cloth_pannel")
         except:
             print("validation false")
     return render(request,"adminn/edit.html",{'cloths':cloths})
@@ -94,7 +95,7 @@ def delete(request,p_id):
     
     cloths=Cloths.objects.get(cloths_id=p_id)
     cloths.delete()
-    return redirect("/cloth_pannel")
+    return redirect("/store/cloth_pannel")
   
 def adminn(request):
     return render(request, "adminn/admin.html")
@@ -116,11 +117,11 @@ def cloth_details(request,p_id):
        
 
                 send_mail(
-                    'STYLOOK',
-                    'Clothes you have been hire has been register'+"\n"
+                    'STYLELOOK',
+                    'Clothes you have been hire, has been register'+"\n"
 
-                    'your hire date is'+ date +"\n"
-                    'you have hire for'+days,
+                    'your hire date is:-'+ date + "\n"
+                    'you have hire for:-'+ days + "days",
                     b_email,
                     ['gansimarina@gmail.com'],
                 )
@@ -145,5 +146,5 @@ def search_cloth(request):
         venues = Cloths.objects.filter(cloths_name__icontains=searched)
         return render(request, "store/search.html",{'searched':searched,'venues':venues})
     else:
-        return render(request, "store/search.html",{})
+        return render(request, "store/store.html",{})
     
