@@ -18,20 +18,20 @@
     </div>
     <div class="content">
 
-    <span>why to choose us?</span>
-    <ol>
-        <li>saves a lot of money</li>
-        <li>Save closet space</li>
-        <li>Wear top designer brands</li>
-        <li>Never run out of clothes to wear</li>
-    </ol>
-    <h3>Rules you need to follow</h3>
-    <ol>
-        <li>Should return on same condition</li>
-        <li>leave citizenship card or driver linences</li>
-        <li>Half payment should done at first</li>
-        <li>Must pay extra payment if dress isnot in same condition</li>
-    </ol>
+        <span>why to choose us?</span>
+        <ol>
+            <li>saves a lot of money</li>
+            <li>Save closet space</li>
+            <li>Wear top designer brands</li>
+            <li>Never run out of clothes to wear</li>
+        </ol>
+        <h3>Rules you need to follow</h3>
+        <ol>
+            <li>Should return on same condition</li>
+            <li>leave citizenship card or driver linences</li>
+            <li>Half payment should done at first</li>
+            <li>Must pay extra payment if dress isnot in same condition</li>
+        </ol>
 
     </div>
 
@@ -44,28 +44,26 @@
         A piece of clothing can cost $60 minimum Perhaps you can buy one or two pieces in a year if your budget is not
         so tight.
 
-        Renting, on the other hand, will let you experience top brands such as Zimmermann at $100. At this price, you
-        will be able to afford designer clothes for all your events, meetings, or travels..</p>
-
+     </p>
 </div>
 
 <div class="row">
     {% for store in cloths %}
     <div class="col-lg-3 col-md-6 col-sm-12 text-center contents ">
         <div class="img-content">
-        <a href="{% static 'assets/' %}{{store.cloths_image}}">
-            <img class="img-fluid   pic " id="zoom-img" src="{% static 'assets/' %}{{store.cloths_image}}">
-        </a>
+            <a href="{% static 'assets/' %}{{store.cloths_image}}">
+                <img class="img-fluid   pic " id="zoom-img" src="{% static 'assets/' %}{{store.cloths_image}}">
+            </a>
 
-        <div class="info">
-            <h4 style>Dress: {{store.cloths_name}}<h4>
-            <p>design by: {{store.cloths_type}}</p>
-            <p>details: {{store.cloths_details}}</p>
-            <p class="price">price: {{store.cloths_price}}  </p>
+            <div class="info">
+                <h4 style>Dress: {{store.cloths_name}}<h4>
+                        <p>design by: {{store.cloths_type}}</p>
+                        <p>details: {{store.cloths_details}}</p>
+                        <p class="price">price: {{store.cloths_price}} </p>
 
-            <a href="/store/cloth_details/{{store.cloths_id}}" class="btns">Hire Now</a>
+                        <a href="/store/cloth_details/{{store.cloths_id}}" class="btns">Hire Now</a>
+            </div>
         </div>
-    </div>
     </div>
     {% endfor %}
 </div>

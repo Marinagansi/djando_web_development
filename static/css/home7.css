@@ -24,7 +24,7 @@ html{
 
  .wrapper{
     position:relative;
-    height: 50rem;
+    height: 54rem;
     display: flex;
     justify-content: center;
     background-attachment:fixed;
@@ -40,7 +40,7 @@ html{
     height:100%;
     object-fit: cover;
     z-index:-1;
-    animation: ani1 24s ease-out forwards;
+    animation: ani1 20s ease-out forwards;
 } 
 
 
@@ -50,13 +50,14 @@ html{
     line-height: 55px;
     letter-spacing: 5px;
     font-family:poppins;
-    color:indianred;
-    margin-bottom: 7px;
+    text-transform: uppercase;
+    margin-bottom: 280px;
     padding: 3rem 2rem;
     border-radius: 0.25rem;
-  
+    /* background-color:rgba(243, 237, 237, 0.8);
+  height: 10rem; */
     opacity: 0;
-    animation: ani2 0.5s ease-out forwards;
+    animation: ani2 0.2s ease-out forwards;
 
 }
 
@@ -64,16 +65,17 @@ html{
 .wrapper-text h5{
     opacity:0;
     margin:0;
+    font-size: 3rem;
 
 }
 /* ease-in will start the animation slowly,
  and finish at full speed. ease-out will start the animation at full speed,
   then finish slowly.  */
 .wrapper-text h4{
-    animation: ani2 0.75s ease-in 4s forwards; 
+    animation: ani2 0.75s ease-in 2s forwards; 
 }
 .wrapper-text h5{
-    animation: ani2 0.75s ease-out 5s forwards;
+    animation: ani2 0.75s ease-out 3s forwards;
 }
 
 @keyframes ani2{
@@ -92,11 +94,28 @@ html{
     text-align:center;
     margin-bottom:4rem;
 }
-.heading h1{
+ h1{
     font-size: 3.5rem;
     color:#525C91;
-    font-family: 'Pacifico', cursive;
+    letter-spacing: 3px;
+    /* font-family: 'Pacifico'; */
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    
 
+}
+.heading h4{
+    font-size: 2rem;
+    color:#525C91;
+    letter-spacing: 3px;
+    /* font-family: 'Pacifico'; */
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 3rem;
+}
+.heading img{
+    width:70px
 }
 .heading .row .second_content{
     border: 1px solid #525C91;
@@ -106,7 +125,8 @@ html{
     font-size: 2rem;
     color:#33353b;
     /* max-width:70rem; */
-    line-height: 2;
+    line-height: 1.6;
+    text-align: center;
     margin-left: 2rem;
     margin-right: 2rem;
 }
@@ -117,9 +137,9 @@ html{
 
 .row .btn{
     width:8rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     height: 3rem;
-    background-color: rgb(235, 204, 204);
+    background-color: rgb(228, 222, 222);
     color:black;
     border:0.2rem solid black;
 }
@@ -131,11 +151,15 @@ html{
     object-fit: cover;
 }
 .row .pics{
-    height:80%;
-    width:40rem;
-    border-radius: 20px;
+    object-fit: contain;
+    height:40rem;
+    width:80%;
+    background-image: linear-gradient(rgb(236,234,227),rgb(228,228,228),rgb(228,236,228));
      
-   
+}
+
+.row .pic-content{
+    
 }
 .reviews{
    
@@ -143,7 +167,7 @@ html{
 }
 .reviews h1{
     margin-top: 0%;
-    font-family: 'Pacifico', cursive;
+    
 }
 .reviews .slide .user img {
     height: 7rem;
@@ -164,7 +188,7 @@ html{
   
   .reviews .slide .text {
     padding: 2rem;
-    background: #b49797;
+    background-image: linear-gradient(rgb(236,234,227),rgb(228,228,228),rgb(228,236,228));;
     border-radius: .5rem;
     line-height: 2;
     font-size: 1.5rem;
@@ -180,7 +204,7 @@ html{
     left: 3rem;
     height: 2rem;
     width: 2rem;
-    background: #b49797;
+    background-image: linear-gradient(rgb(236,234,227),rgb(228,228,228),rgb(228,236,228));
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
   }
@@ -193,7 +217,7 @@ html{
     font-size: 3.5rem;
     color:#525C91;
     text-align:center;
-    font-family: 'Pacifico', cursive;
+   
 
   }
   .blog .picss{

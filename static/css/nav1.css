@@ -134,6 +134,7 @@ ul{
     display:flex;
     align-items: center;
     margin-top: 1.6rem;
+    margin-right:13rem;
 
 }
 input{
@@ -157,10 +158,13 @@ label{
     color: blueviolet;
 }
 .search{
-    background-color: grey;
-    width:8rem;
+    background-color:#d6cdcd;
+
     height:3rem;
-    border-radius: 6px;
+    /* border-radius: 6px; */
+    border:none;
+    font-size: medium;
+    margin-right: 0%;
 }
 
 

@@ -32,10 +32,10 @@
         <form action="/store/searched" class="search-form" method=POST>
           {% csrf_token %}
           
-          <label for="search-box" class="fas fa-search srch"></label>
-          <input type="search" name="searched" placeholder="search here..." id="search-box">
-          
-          <input class="search" type="submit" value="search">
+          <!-- <label for="search-box" class="fas fa-search srch"></label> -->
+          <input type="search" name="searched" placeholder=" search here..." id="search-box">
+          <button type="submit" class="search"><i class="fas fa-search"></i></button>
+          <!-- <input class="search" type="submit"  value="search"> -->
    
       </form>
        <!-- searchbar -->
@@ -62,11 +62,11 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="/booking/user_profile/{{request.session.customer_id}}">History</a></li>
                 
-                <li><a class="dropdown-item" href="/customer/signout">logout</a></li>
+        
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">ocassion</a></li>
+                <li><a class="dropdown-item" href="/customer/signout">logout</a></li>
               </ul>
             </li>
             
