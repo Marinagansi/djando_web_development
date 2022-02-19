@@ -12,4 +12,4 @@ class BookedForm(forms.ModelForm):
 class BookingUpdateForm(forms.ModelForm):
   class Meta:
     model = Booking
-    fields = ('email','start_date','days')
+    fields = ('email','start_date','days') 
