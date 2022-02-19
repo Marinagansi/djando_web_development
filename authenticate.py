@@ -5,7 +5,7 @@ from customer.models import Customer
 class Authentication:
     def valid_user(function):
         def wrap(request):
-            print(request)
+            print(request)  
             try:
                 Customer.objects.get(customer_name=request.session['customer_name'],customer_password=request.session['customer_password'])
                 return function (request)
@@ -23,6 +23,6 @@ class Authentication:
             except:
                 print('no authentication')
                 messages.warning(request,'enter valid user')
-            return redirect('/customer/signin')
+            return redirect('/home')
         return wrap
 
